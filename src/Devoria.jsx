@@ -1983,21 +1983,25 @@ function Footer() {
         </div>
         <div style={{ display: "flex", gap: 20 }}>
           {["Twitter", "LinkedIn", "Dribbble", "GitHub"].map((s) => (
-            <a
-              key={s}
-              href="#"
-              style={{
-                color: "var(--faint)",
-                fontSize: 11,
-                fontFamily: "'DM Mono',monospace",
-                letterSpacing: "0.06em",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.target.style.color = "var(--p)")}
-              onMouseLeave={(e) => (e.target.style.color = "var(--faint)")}
-            >
-              {s.toUpperCase()}
-            </a>
+           <button
+  key={s}
+  type="button"
+  style={{
+    background: "none",
+    border: "none",
+    padding: 0,
+    cursor: "pointer",
+    color: "var(--faint)",
+    fontSize: 11,
+    fontFamily: "'DM Mono',monospace",
+    letterSpacing: "0.06em",
+    transition: "color 0.2s",
+  }}
+  onMouseEnter={(e) => (e.target.style.color = "var(--p)")}
+  onMouseLeave={(e) => (e.target.style.color = "var(--faint)")}
+>
+  {s.toUpperCase()}
+</button>
           ))}
         </div>
       </div>
